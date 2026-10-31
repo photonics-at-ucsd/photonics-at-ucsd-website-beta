@@ -7,7 +7,11 @@ added: 2026-10-25
 stub: true
 diagram: ./diagram.svg
 diagramAlt: >-
-  Setup: TODO
+  Setup: light from a point-like source (a bare LED behind a small pinhole, or a bare LEP) spreads
+  out to a large concave mirror, passing through the sample region in front of the mirror. The
+  mirror focuses the light back to a point next to the source, where a knife-edge (optionally on a
+  translation stage) blocks part of the focus. The light then spreads out again onto a viewing
+  screen.
   
 #authors:
 

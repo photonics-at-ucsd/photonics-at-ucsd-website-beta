@@ -63,7 +63,7 @@ Unlike laser diodes, red HeNe lasers have a spectral linewidth of 1.5 GHz at the
 Demos that require a HeNe (some of these haven't been posted yet - now you have a sneak peak into what's coming in the future!):
 <!-- TODO: link these to their demo pages as they're added -->
 
-- *Strongly recommended* for any interferometry demos.
+- *Strongly recommended* for any interferometry demos, like the [Michelson interferometer](/demos/michelson/).
 - Absolute gravimeter (due to the large path length imbalance).
 - [Fabry–Perot demos](/demos/fabry-perot-mode-filter/).
 - Any demonstrations of frequency shifting using an Acousto-optic modulator (these are not part of [the existing documentation](/demos/acousto-optic/) but is a neat functionality we're interested in trying in the future).

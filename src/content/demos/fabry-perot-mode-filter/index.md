@@ -3,7 +3,7 @@ title: Fabry–Perot Mode Filter
 subtitle: Watch the light exiting an optical resonator rapidly cycle through a variety of intricate mode patterns.
 blurb: >-
   Fabry perot resonators have several very unique properties, owing to their ability to store light internally as it bounces around hundreds or thousands of times. This demo explores one of the less well-known capabilities of free space resonators: their ability to *spatially* filter light to a specific modal pattern. As this spatial filtering is highly wavelength-dependent, pairing a Fabry perot cavity with an unstabilized Helium Neon laser yields rapidly varying intensity patterns on a viewing screen that will captivate attendees and *really* confuse a fair number of optically-inclined viewers.
-added: 2026-09-23 # TODO: real date
+added: 2026-09-23
 
 diagram: ./diagram.svg
 diagramAlt: >-
@@ -120,15 +120,15 @@ Let attendees turn the HeNe laser on and off and/or play with the cavity mirrors
 
 `L ≤ 2R`
 
-If the two mirrors are identical, the cavity is stable for L ≤ 2R (the distance between mirrors is at most twice their radius of curvature) [ref](#). Don't put L > 2R or it won't work.
+If the two mirrors are identical, the cavity is stable for L ≤ 2R (the distance between mirrors is at most twice their radius of curvature). Don't put L > 2R or it won't work. The underlying reason for this is mentioned briefly on [this Thorlabs page](https://www.thorlabs.com/fabry-perot-interferometer-tutorial?tabName=Fabry-Perot%20Tutorial).
 
 ### Mode resonance frequencies
 
 `L ≈ 1.5R` `avoid L = R, 2R`
 
-For this demo to work, we want every mode to resonate at a different frequency — if two modes share a resonance, both appear at once and the output looks less clean. These frequencies are determined by the Gouy phase [ref](#).
+For this demo to work, we want every mode to resonate at a different frequency — if two modes share a resonance, both appear at once and the output looks less clean. These frequencies are determined by [the Gouy phase](https://www.rp-photonics.com/gouy_phase_shift.html). [This Thorlabs page](https://www.thorlabs.com/fabry-perot-interferometer-tutorial?tabName=Fabry-Perot%20Tutorial) has some additional information on the impact that phase has on resonator frequencies.
 
-It turns out the *worst* choice here is a confocal cavity, L = 2R, or L = R [ref](#) (the best choice for other applications, like Fabry–Perot laser spectroscopy). L = φR, where φ is the golden ratio, is probably ideal, since φ is often considered the "least composite number." In practice, any distance around L = 1.5R (but not exactly that) is probably good enough.
+It turns out the *worst* choice for this demo is a confocal cavity, L = R. In this configuration, every other higher order mode lands on the same frequency so many modes are degenrate. This choice is best choice for other applications, like Fabry–Perot laser spectroscopy. However, in our demo, we want every mode to land on a totally different frequency. Fortunately, this happens for any L/R ratio that is irrational. Just choose any value of L that is not too close to a rational multiple of R and this demo will probably work. Picking L = φR where φ is the golden ratio would be a fun choice, as the golden ratio is commonly called the [most irrational number](https://math.stackexchange.com/questions/395938/why-is-varphi-called-the-most-irrational-number) - it is the one that is "furthest" from being approximatable as a rational number by some definitions.
 
 ### Mode coupling
 

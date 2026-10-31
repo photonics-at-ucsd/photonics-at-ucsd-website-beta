@@ -7,7 +7,10 @@ added: 2026-10-25
 stub: true
 diagram: ./diagram.svg
 diagramAlt: >-
-  Setup: TODO
+  Setup: a laser (any type) shines through an acousto-optic modulator, which is driven by an RF
+  source (about 50–200 MHz) through an RF amplifier. Two beams leave the modulator, the transmitted
+  beam and a slightly deflected diffracted beam, and land side by side on a viewing screen about
+  1–4 m away.
 #photos:
 
 #- { src: ./setup_rough.jpg, alt: The demo roughly put together on a big optical table in the lab.}

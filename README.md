@@ -119,7 +119,7 @@ Links to other pages on this site should start with `/` (e.g. `/resources/`). Th
 
 ## Adding or editing a resource page
 
-Resource pages (Light Sources, Optomechanics, …) live in `src/content/resources/<page-name>/index.md` and appear at `/resources/<page-name>/` and on the Resources page. The top of the file needs `title`, `subtitle` and `order` (position on the Resources page, lowest first). The rest uses exactly the same Markdown conventions as demo pages above. The scoring rubric is the exception: it's generated from `src/data/rubric.yaml`.
+Resource pages (Light Sources, Optomechanics, …) live in `src/content/resources/<page-name>/index.md` and appear at `/resources/<page-name>/` and on the Resources page. The top of the file needs `title`, `subtitle` and `order` (position on the Resources page, lowest first). Add `stub: true` to show the red "this page is a stub" banner, as on demo pages. The rest uses exactly the same Markdown conventions as demo pages above. The scoring rubric is the exception: it's generated from `src/data/rubric.yaml`.
 
 ## Other pages' text
 

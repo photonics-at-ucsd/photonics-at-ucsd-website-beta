@@ -21,13 +21,9 @@ diagramAlt: >-
   beamsplitter and form interference fringes on a viewing screen; a white light source can be swapped
   in for colorful fringes.
 
-# Photos go in this folder, then list them here (the first one is also the thumbnail):
-# photos:
 photos:
   - { video: ./video.mp4, alt: "White light interference pattern coming from a Michelson interferometer with white light (LEP) illumination as the translation stage is slowly moved" }
   - { src: ./michelson-at-event.jpg, alt: Michelson interferometer being presented at an Optics Hour event.}
-  
-#   - { src: ./photo-1.jpg, alt: The interferometer on a breadboard }
 
 # Scores: see /resources/rubric/ for what each number means.
 scores:
@@ -47,7 +43,7 @@ supplies:
     details: >-
       Central component of the interferometer. Main requirement is that it's decently flat and
       splits light at close to a 50/50 ratio. [Many options](https://www.thorlabs.com/beamsplitter-guide?tabName=BS%20Selection%20Guide).
-      Spending more money usually gets you bigger and more flat. Having a cube is nice and is often
+      Spending more money usually gets you bigger and more flat. Having a cube is nice as it eliminates the need for a compensation plate in the interferometer (a complexity which is not discussed in this guide but you can find mention of this on [Wikipedia](https://en.wikipedia.org/wiki/Michelson_interferometer#Source_bandwidth)). Cubes are also often
       visually easier to explain to attendees. Pricey new, but there should be many eBay options
       floating around if you look.
     cost: ["$50–$100 used", "$100–$350 new"]
@@ -144,8 +140,7 @@ We also have [this old document](https://docs.google.com/document/d/1kpCsR0iaVou
 1. Place the HeNe laser and align it to the breadboard (level and parallel to the grid of holes; using two irises, or one that you move, is the best way to do this).
 2. Now is a good time to set the height of the microscope objective for use later. First, make sure you have the laser shining on some sort of height reference (it could be shining through an iris, or you can shine it on a viewing screen and mark the point with a pencil). Place the microscope objective in the beam about 10–20 cm from the viewing screen — you should see quite a large spot on the screen. Tweak the height of the objective until the large spot is centered vertically on the height reference, and tighten down the height adjustment. Set the microscope objective aside.
 3. Place the beamsplitter and adjust its rotation until the parasitic reflections off its surface reflect back towards the laser. Adjust its height/side-to-side position until the beam from the HeNe is as centered on the beamsplitter as possible (having it centered on the optical path improves the quality of the interference pattern later, as the beams coming from the two arms of the interferometer will overlap with each other the best).
-4. Place the first mirror of the interferometer (it doesn't matter much which), and adjust the tip/tilt until its reflection is also reflecting back towards the HeNe. Once again, center the narrow beam on the mirror as well as you can.
-   <!-- TODO: link "reflecting back towards the HeNe" to a light sources section about back-reflections into HeNes, once one exists -->
+4. Place the first mirror of the interferometer (it doesn't matter much which), and adjust the tip/tilt until its reflection [is also reflecting back towards the HeNe](/resources/light-sources/#affordable-hene-lasers). Once again, center the narrow beam on the mirror as well as you can.
 5. Place the viewing screen at the output. Right now, you should see just one bright spot on the screen, from the mirror you put down (though there may be several dim spots as well if you're using beamsplitters that don't have a good AR coating).
 6. Place the second mirror, taking care to place it the same distance from the beamsplitter as the first mirror is (if you're planning to do white light patterns, make sure one of the mirrors is on a translation stage). Center the surface of the mirror on the beam. Look at the viewing screen and adjust the tip/tilt of the second mirror until its bright spot lands on the bright spot coming from the first mirror. As soon as you do this you should see the two spots begin to interfere a bit, but it may not be obvious yet.
 7. Place the microscope objective between the HeNe and the beamsplitter. The height should already be right if you performed the earlier process — all you need to do is ensure the beam from the HeNe is going through the objective straight, and slide it side-to-side to center the (now much larger) beam on the optics you've already placed. You should be greeted with an interference pattern very similar to the one shown in the "mirrors tilted, L1 ≠ L2" case in [the diagram above](#diagram). Congrats!
@@ -168,8 +163,8 @@ We also have [this old document](https://docs.google.com/document/d/1kpCsR0iaVou
 2. When placing the white light source, place it as far away from the beamsplitter as possible (if you place it too far and are using a white LED/point source, the light actually going through the interferometer will be quite dim, so there is a balance here). We recommend passing the white light through an iris to increase the [spatial coherence](/resources/light-sources/#white-light) of the light incident on the interferometer, which will drastically improve the sharpness of the interference patterns (in exchange for lower brightness).
 3. Adjust the position and tip/tilt of the white light/pinhole until the beam is centered on the beamsplitter as well as the mirrors. The next steps depend on whether you are using an LEP source or a more generic broadband source.
 4. If you're using an LEP source, as soon as the light is going through the interferometer, you should see [faint yellow and pink stripes on the screen](/demos/michelson/interactive/#L1=100&L2=100.5&L2fine=5&thetaX=92&thetaY=50&D=0&Ld=100&fov=10&lambdaC=550&fwhm=100&lambdaP=550&source=phosphor&phaseMode=wrapped&showCones=0&logY=0&x=0&y=0). This is yet another property of the LEP source which makes it *super* nice for this setup.
-   <!-- TODO: unfinished in the original: "Fine-tune the tip/tilt of one of the …" -->
-   1. At this point, slowly and gently move the translation stage in one direction, keeping track of the position of the stage knob you started at. If you've gone 50 µm and don't see colorful patterns, turn around and go 50 µm <!-- TODO: unfinished in the original -->
+   1. Fine tune the tip/tilt of one of the mirrors to flatten out the fringes, making them as large as possible.
+   2. Slowly and gently move the translation stage in one direction, keeping track of the position of the stage knob you started at. If you've gone 50 µm and don't see colorful patterns, turn around and go 50 µm the other way. If done slowly and carefully, in our experience you are guaranteed to find the colorful fringes.
 5. If you're using a white LED or other lamp, you will see absolutely no fringes until you're within about 2 µm of perfectly balancing the arms. You can see this yourself in the simulator [here](/demos/michelson/interactive/#L1=100&L2=100&L2fine=5&thetaX=92&thetaY=50&D=0&Ld=100&fov=10&lambdaC=550&fwhm=100&lambdaP=550&source=sun&phaseMode=wrapped&showCones=0&logY=0&x=0&y=0). If you have gotten the mirror tip/tilt real good in the monochromatic step, it is possible to scan the stage extremely slowly ±50 µm from the "roughly balanced" position and you will see the colorful fringes suddenly appear. We have found that this is by no means guaranteed. One method which we have found to work:
    1. Replace the viewing screen with a photodetector that has an analog output (you could literally use a cheap photodiode with a resistor across its terminals) fed into an oscilloscope. The smaller the area of this photodiode, the better. Make sure to check it works by shining other light sources at it and seeing the signal on the scope.
    2. Put the scope on "screen" or "rolling" mode (so the x axis of the scope is around 1–5 seconds). It is also useful to put the scope into AC-coupled mode and scale the Y axis way up, so even small fluctuations in optical power are easy to see.

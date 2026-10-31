@@ -16,7 +16,13 @@ added: 2026-10-29
 diagram: ./diagram.svg
 #                               # here as diagram.source.svg and run `npm run diagrams` to make
 #                               # diagram.svg (see README "Diagrams"). PNG/JPG also work.
-diagramAlt: TODO for Claude.
+diagramAlt: >-
+  Two views of the same tabletop puzzle board, unsolved and solved. Red, green and blue lasers and
+  detectors of matching colors sit at fixed positions, with orange barriers between them. Players
+  move one-sided mirrors, a two-sided mirror and a prism to steer each beam straight into its
+  matching detector; the objective is to activate all 3 detectors at the same time. Rules: lasers
+  and detectors are fixed; mirrors and prisms can be moved anywhere; a detector only responds to
+  its own color of laser, and only if the light enters it straight-on.
 # thumbnail: ./diagram.svg        # front page image (defaults to the first photo, then the diagram)
 photos:
   - { src: ./laser-puzzle-at-event.jpg, alt: "UCSD students solve the laser puzzle at an Optics Hour event." }

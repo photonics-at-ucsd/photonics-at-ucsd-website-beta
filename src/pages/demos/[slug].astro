@@ -5,6 +5,7 @@ import Base from '../../layouts/Base.astro';
 import Meter from '../../components/Meter.astro';
 import DocBody from '../../components/DocBody.astro';
 import LoopVideo from '../../components/LoopVideo.astro';
+import StubBanner from '../../components/StubBanner.astro';
 import { resolveClip } from '../../lib/media';
 import { inlineMarkdownHtml } from '../../lib/inline-markdown.mjs';
 import { PARAMETERS } from '../../data/parameters';
@@ -41,16 +42,7 @@ const photos = await Promise.all(
 ---
 
 <Base title={d.title} description={d.subtitle} footerLink={{ label: '← All demos', href: '/' }}>
-  {
-    d.stub && (
-      <div class="stub-banner" role="note">
-        <div class="container">
-          <span class="stub-banner-label">Stub</span>
-          <p>This page is a stub. It will be expanded to a full guide in the future!</p>
-        </div>
-      </div>
-    )
-  }
+  {d.stub && <StubBanner />}
   <section class="container demo-hero">
     <div class="demo-hero-main">
       <nav class="breadcrumb" aria-label="Breadcrumb">

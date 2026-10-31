@@ -2,6 +2,7 @@
 title: Optomechanics
 subtitle: What to DIY and what to buy.
 order: 2
+stub: true
 ---
 
 We have purposely included many demos on this site that don’t require traditional optical lab equipment, but many (particularly more complex ones) do. A well-equipped optics lab almost always contains thousands of dollars of optomechanics: the breadboards, posts, mounts, and many other helpful components that allow optics to be rigidly mounted and fine-tuned into perfect alignment. However, the high cost makes many of these components inaccessible to all but the most well-funded groups and organizations. On this page we discuss which optomechanics have affordable DIY alternatives and which we think are worth buying.
@@ -22,9 +23,3 @@ We have purposely included many demos on this site that don’t require traditio
 
 ## More details
 This page is a work in progress. More details coming in the future!
-<!--
-TODO: detailed sections (incomplete in the draft, so not shown on the site yet). Add each as a
-"## Heading" with its text below:
-  Optical breadboards · Fixed lens holders · Irises · Viewing screen · Kinematic tip/tilt mounts ·
-  Posts · Post holders · Bases · Base clamps
--->

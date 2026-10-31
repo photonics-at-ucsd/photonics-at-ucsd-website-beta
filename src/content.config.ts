@@ -95,6 +95,7 @@ const resources = defineCollection({
     title: z.string(),
     subtitle: z.string(),
     order: z.number().default(100), // position on the Resources page, lowest first
+    stub: z.boolean().default(false), // shows a "this page is a stub" banner at the top
     draft: z.boolean().default(false),
   }),
 });

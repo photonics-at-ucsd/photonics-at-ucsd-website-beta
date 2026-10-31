@@ -52,7 +52,7 @@ supplies:
     details: >-
       You want all this on some sort of table. An optical breadboard is the fancy solution, but you
       can just tape things to a piece of wood, honestly.
-    cost: TODO
+    cost: $10-100
   - item: Polarizer / polarizing film
     need: highly-recommended
     details: >-
@@ -93,14 +93,19 @@ Let attendees play with the paddles or move un-taped SMF-28 fiber and observe th
 - Switching to 50 µm fiber will produce more complex intensity patterns.
 - Switching to single-mode fiber will produce an intensity pattern that does not vary spatially as the paddles are moved — only its intensity as viewed through a polarizer changes. Polarization control in SMF is the most typical use case of polarization paddles.
 
-- TODO add more explanation of: impact of refractive index, clearly talk about fiber diameter, say explicitly that there is the tradeoff between the "niceness" of single mode fiber and the difficulty of coupling light into it 
+The main concept to explain is that different fibers are suitable for different situations. Large core, multi-mode fibers are much easier to couple light into and can carry higher optical powers, but the unchanging spatial profile of single mode fibers is worth it in many circumstances as well.
 
 ### Concepts, from simple to complex
 
-- How fiber works ([LINK TO OTHER DEMOS THAT HELP DO THIS BETTER])
+- How fiber works: total internal reflection at the interface between core and cladding.
 - What the different modes in a fiber mean
   - Analogy 1: angles of light undergoing TIR
   - Analogy 2 (for modes in general): a guitar string
+
+- What impacts the number of modes a fiber supports:
+  - A larger core diameter means more modes
+  - A higher core/cladding refractive index means more modes
+  - A smaller wavelength in the same fiber means more modes
 
 - Impact of modes on fiber applications
   - Communications: modal dispersion (light from each mode arrives at the receiver at different times, like echoes)

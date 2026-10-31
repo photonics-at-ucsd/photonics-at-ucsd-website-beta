@@ -16,7 +16,10 @@ added: 2026-10-29 # YYYY-MM-DD, used for "most recent" sorting
 diagram: ./diagram.svg        # shown full width at the top of the page. Save the Inkscape master
 #                               # here as diagram.source.svg and run `npm run diagrams` to make
 #                               # diagram.svg (see README "Diagrams"). PNG/JPG also work.
-#diagramAlt: 
+diagramAlt: >-
+  White light strikes the surface of a chocolate bar and some of it diffracts, splitting into a
+  rainbow of colored rays. A magnified inset shows why: the chocolate's surface is covered in
+  microscopic ridges spaced about one wavelength of light apart.
 # thumbnail: ./thumb.jpg        # front page image (defaults to the first photo, then the diagram)
 photos:                       # up to two are shown beside the diagram
   - { video: ./video.mp4, alt: "Video of colorful patterns changing colors as the position of a light source is changed above the chocolates." }
