@@ -68,17 +68,20 @@ const photos = await Promise.all(
     </div>
 
     <div class="demo-side">
-      <dl class="scores" aria-label="Attribute scores">
-        {
-          scoreRows.map((r) => (
-            <div class="scores-row">
-              <dt>{r.label}</dt>
-              <dd>{r.range && <Meter range={r.range} />}</dd>
-              <dd class="scores-value">{r.value}</dd>
-            </div>
-          ))
-        }
-      </dl>
+      <div>
+        <dl class="scores" aria-label="Attribute scores">
+          {
+            scoreRows.map((r) => (
+              <div class="scores-row">
+                <dt>{r.label}</dt>
+                <dd>{r.range && <Meter range={r.range} />}</dd>
+                <dd class="scores-value">{r.value}</dd>
+              </div>
+            ))
+          }
+        </dl>
+        <a class="rubric-link" href={withBase('/resources/rubric/')}>What do these scores mean? →</a>
+      </div>
       {
         photos.length > 0 && (
           <div class="demo-photos">

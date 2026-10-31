@@ -381,6 +381,17 @@ main.page {
   text-align: right;
   white-space: nowrap;
 }
+/* Small link to the scoring rubric under a demo's scores (demo page and front page preview) */
+.rubric-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+.rubric-link:hover {
+  color: var(--accent);
+}
 /* Photos and clips below the scores, each at its own aspect ratio */
 .demo-photos {
   display: flex;
@@ -1007,7 +1018,10 @@ a.cite {
   flex-direction: column;
   color: var(--ink);
   text-decoration: none;
+}
+.preview-col {
   align-self: start;
+  min-width: 0;
 }
 .preview:hover {
   color: var(--ink);

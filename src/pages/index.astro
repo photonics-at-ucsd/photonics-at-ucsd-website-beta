@@ -139,6 +139,7 @@ const chevronUp = 'M2 8l4-4 4 4';
 
       {
         featured && (
+          <div class="preview-col">
           <a class="preview lift" href={featured.href} aria-label={`Open ${featured.title}`}>
             <div class:list={['preview-media', { 'is-diagram': featured.isDiagram }]}>
               {featured.video ? (
@@ -164,6 +165,9 @@ const chevronUp = 'M2 8l4-4 4 4';
             </div>
             <span class="preview-open" aria-hidden="true">Open demo <span>→</span></span>
           </a>
+          {/* Outside the card: it's a link itself, and links can't be nested */}
+          <a class="rubric-link" href={withBase('/resources/rubric/')}>What do these scores mean? →</a>
+          </div>
         )
       }
     </section>
