@@ -1,6 +1,8 @@
 # Photonics Society at UC San Diego — Optical Demos
 
-Documentation site for the optical demos built by the Photonics Society at UC San Diego. Built with [Astro](https://astro.build), hosted on GitHub Pages, and deployed automatically on every push to `main`.
+**Note:** This README is currently disorganized as it's just the accumulation of random additions Claude made whenever it wanted to. We're going to make this more coherent (a better guide for contributing to this site) sometime in the near future.
+
+Documentation site for the optical demos built by the Photonics Society at UC San Diego. Built with [Astro](https://astro.build), hosted on GitHub Pages, and deployed automatically on every push to `main`. 
 
 ## Adding or editing a demo
 
