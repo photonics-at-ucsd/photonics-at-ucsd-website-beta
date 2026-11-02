@@ -3,14 +3,15 @@
 # The folder name becomes the page address: /demos/<your-demo-name>/
 # Use lowercase words separated by dashes, e.g. michelson-interferometer.
 
-title: Your Demo Title
-subtitle: One sentence that makes someone want to see this demo.
+title: Rotating Polarizer
+subtitle: See changes in intensity due to polarization and amaze all ages while introducing them to the nature of light.
 # Optional: a short paragraph of context for readers new to the phenomenon, shown under the subtitle.
 # *italics*, **bold** and [links](…) work here.
 blurb: >-
-  A few sentences explaining the underlying effect in plain language.
+  Polarization is one of the amazing properties that arise from the wave nature of light. From sunglasses to 3D cinema and displays, is one of the most easily found optical phenomena in our daily lives. However, its true physical origin is often not well understood. This demo uses a simple electromechanical setup to make two polarizers rotate relative to each other and to allow observers to see the stunning intensity changes that arise. They can further interact with the demo by passing objects, such as different types of plastic utensils, in between the polarizers to see the effect of different materials on the polarization of light passing through them. **This demo also has our first full build guide so you can create your own!**
+
 # stub: true   # unfinished page: shows a red "this page is a stub" banner at the top
-added: 2026-01-31 # YYYY-MM-DD, used for "most recent" sorting
+added: 2026-11-01 # YYYY-MM-DD, used for "most recent" sorting
 
 # Images live in this same folder. All of these are optional.
 # diagram: ./diagram.svg        # shown full width at the top of the page. Save the Inkscape master
