@@ -4,7 +4,7 @@
 # Use lowercase words separated by dashes, e.g. michelson-interferometer.
 
 title: Rotating Polarizer
-subtitle: See changes in intensity due to polarization and amaze all ages while introducing them to the nature of light.
+subtitle: See changes in intensity due to polarization and use these to see colorful birefringence patterns from everyday objects.
 # Optional: a short paragraph of context for readers new to the phenomenon, shown under the subtitle.
 # *italics*, **bold** and [links](…) work here.
 blurb: >-
@@ -27,15 +27,15 @@ photos:                       # up to two are shown beside the diagram
 # One entry per parameter in src/data/rubric.yaml — see the Scoring rubric page for what each
 # number means. Each is one number (5) or a range ([7, 9]): 0–10, except budget, which is in dollars.
 scores:
-  budget: [50, 100]
-  tools: 3                   # Required tools
+  budget: [20, 100]
+  tools: [3,5]                   # Required tools
   manufacturingDifficulty: 4
   alignmentDifficulty: 0
   portability: [5,7]
   setupTime: 1
   presentationComplexity: [2,8]
   conceptComplexity: [5,7]
-  wow: 5                     # WOW factor
+  wow: [5,6]                     # WOW factor
 
 # Shown as a table under the "## Supplies" heading.
 # need: required | effectively-required | likely-required | maybe-required |
