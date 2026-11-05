@@ -159,6 +159,7 @@ If you change the Markdown plugins in `src/plugins/`, stop the dev server and de
 | `src/pages/index.astro`, `src/scripts/selector.ts` | Demo Selector (plot, preview, sortable list) |
 | `src/pages/demos/[slug].astro` | Demo page template |
 | `src/pages/demos/michelson/interactive.astro`, `src/scripts/interferometer.js` | Michelson interferometer simulator (a one-off page). Link to a preset with `/demos/michelson/interactive/#…`, copying the hash from its "Get share link" button |
+| `src/pages/demos/laser-puzzle/play.astro`, `src/scripts/laser-puzzle/` | Online laser puzzle (prototype). Settings (detector tolerance, piece sizes, wavelengths, materials) are in `src/data/laser-puzzle/settings.yaml`; each board is a file in `src/data/laser-puzzle/boards/` (format explained at the top of `diagram.yaml`). `npm run laser-boards` checks that every board loads and that its listed solution solves it |
 | `src/pages/resources/[slug].astro`, `src/pages/resources/index.astro` | Resource page template and the Resources page |
 | `src/components/DocBody.astro` | Page body shared by demo and resource pages: Contents sidebar / sticky bar + the Markdown |
 | `src/styles/global.css` | Design tokens and all styles. The desktop design comes first; the "Responsive" section at the end adapts it for narrow windows (≤1199px), tablets (≤959px) and phones (≤719px) |

@@ -1,0 +1,58 @@
+---
+// The online laser puzzle: a bare prototype page (no site layout yet). The game itself is
+// src/scripts/laser-puzzle/ (start with main.js). Its settings and boards are YAML files in
+// src/data/laser-puzzle/, read here at build time and embedded in the page as JSON.
+import { parse } from 'yaml';
+import settingsText from '../../../data/laser-puzzle/settings.yaml?raw';
+import { withBase } from '../../../lib/url';
+
+const boardFiles = import.meta.glob<string>('../../../data/laser-puzzle/boards/*.yaml', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+});
+const boards = Object.entries(boardFiles)
+  .map(([path, text]) => ({ id: path.split('/').pop()!.replace(/\.yaml$/, ''), ...parse(text) }))
+  .sort((a, b) => (a.id === 'diagram' ? -1 : b.id === 'diagram' ? 1 : a.id.localeCompare(b.id)));
+const data = { settings: parse(settingsText), boards };
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Laser Puzzle (online prototype)</title>
+    <style>
+      body { font-family: sans-serif; margin: 16px; }
+      #lp-canvas { display: block; touch-action: none; outline: none; }
+      #lp-status { white-space: pre-line; }
+    </style>
+  </head>
+  <body>
+    <p><a href={withBase('/demos/laser-puzzle/')}>← Laser Puzzle demo</a></p>
+    <h1>Laser Puzzle (online prototype)</h1>
+    <p>
+      Steer each laser into the detector of the same color. Turn all the detectors on at the same time to win. Lasers,
+      detectors and barriers stay put. Mirrors and the prism can go anywhere. A detector only turns on if the beam goes
+      straight into its opening.
+    </p>
+    <p>
+      <label>Board: <select id="lp-board"></select></label>
+      <button id="lp-reset" type="button">Reset</button>
+      <button id="lp-solution" type="button">Show solution</button>
+    </p>
+    <div><canvas id="lp-canvas" tabindex="0"></canvas></div>
+    <p id="lp-selected"></p>
+    <p id="lp-status"></p>
+    <p>
+      Controls: drag a mirror or prism to move it. Drag the round handle on the selected piece to rotate it, or use the
+      mouse wheel over a piece. With a piece selected, the arrow keys move it, Q / E rotate it, and Esc deselects it. Hold
+      Shift for finer steps. Light blue edges on mirrors are the reflective faces.
+    </p>
+    <script type="application/json" id="lp-data" set:html={JSON.stringify(data)} />
+    <script>
+      import '../../../scripts/laser-puzzle/main.js';
+    </script>
+  </body>
+</html>

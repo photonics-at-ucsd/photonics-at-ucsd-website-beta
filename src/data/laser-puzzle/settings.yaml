@@ -1,0 +1,59 @@
+# Global settings for the online laser puzzle (/demos/laser-puzzle/play/).
+# They apply to every board. A board can still give one of its pieces its own size (see
+# boards/diagram.yaml), but rules like the detector tolerance are the same everywhere.
+#
+# Units: lengths are "board units", the same units the boards use (the diagram on the demo page is
+# 75 x 115 of them). Angles are in degrees.
+
+# How strict the detectors are. A detector switches on only when a beam of its own color passes
+# through its opening (positional alignment) travelling along its axis (angular alignment).
+detector:
+  angleTolerance: 3        # degrees: largest allowed angle between the beam and the detector's axis
+  apertureWidth: 2         # width of the opening in the detector's front face
+  length: 11               # body size; the opening is centred on one of the short ends
+  width: 5
+  showFeedback: true       # say how far off-axis a beam of the right color arrives (online-only hint)
+
+laser:
+  length: 26
+  width: 3
+
+mirror:
+  length: 6.35
+  thickness: 1.6
+
+barrier:
+  thickness: 1
+
+prism:
+  size: 6.35               # leg length (right-angle prisms) or side length (equilateral prisms)
+  material: BK7            # default for prisms that don't name one
+
+# Laser colors. Boards refer to them by name; a detector only responds to its own color.
+# wavelength (nm) sets each prism's refractive index (dispersion); display is the color drawn.
+colors:
+  red:   { wavelength: 635, display: "#e00000" }
+  green: { wavelength: 532, display: "#00a000" }
+  blue:  { wavelength: 450, display: "#0030ff" }
+
+# Prism materials: Sellmeier coefficients with wavelength in micrometres,
+# n² = 1 + Σ B·λ² / (λ² − C).
+materials:
+  BK7:                     # Schott N-BK7
+    B: [1.03961212, 0.231792344, 1.01046945]
+    C: [0.00600069867, 0.0200179144, 103.560653]
+  acrylic:                 # PMMA (Sultanova et al. 2009)
+    B: [1.1819]
+    C: [0.011313]
+
+# Moving pieces around.
+controls:
+  rotateStep: 1            # degrees per mouse wheel notch / Q or E key press
+  fineRotateStep: 0.1      # the same with Shift held
+  nudgeStep: 0.5           # board units per arrow key press
+  fineNudgeStep: 0.05      # the same with Shift held
+  pickMargin: 1            # how far outside a piece (board units) a click still grabs it
+  noOverlap: true          # movable pieces can't overlap barriers, the board edge or other pieces
+
+trace:
+  maxSegments: 200         # a beam stops after this many straight segments (e.g. trapped between mirrors)

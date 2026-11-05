@@ -1,0 +1,45 @@
+# The example board from the diagram on the demo page (src/content/demos/laser-puzzle/diagram.svg).
+#
+# Every board is one file in this folder; the file name is its id (/demos/laser-puzzle/play/#board=diagram).
+#
+# Coordinates: x to the right, y DOWN, origin at the board's top-left corner, in board units.
+# Angles: degrees clockwise from the +x direction (0 = right, 90 = down, 180 = left, 270 = up).
+#   laser     angle = direction the beam leaves in; x, y = centre of the body
+#   detector  angle = direction its opening faces (light must travel the opposite way to enter it)
+#   mirror    angle = direction the reflective face faces; sides: 2 makes both long faces reflective
+#   prism     angle = direction from the middle of the base (hypotenuse) to the opposite corner;
+#             x, y = centroid. shape: right-isosceles or equilateral
+#   barrier   a wall from (x1, y1) to (x2, y2)
+# Lasers, detectors and barriers are fixed; mirrors and prisms can be moved (add fixed: true/false to
+# change that). Sizes come from settings.yaml unless a piece gives its own (length, width, size, ...).
+
+name: Diagram puzzle
+description: The example board drawn on the demo page.
+width: 75
+height: 115
+
+pieces:
+  - { id: laser-red,   type: laser, color: red,   x: 65.8, y: 20.2, angle: 120 }
+  - { id: laser-green, type: laser, color: green, x: 23.1, y: 12.5, angle: 45 }
+  - { id: laser-blue,  type: laser, color: blue,  x: 12.5, y: 73.8, angle: 315 }
+
+  - { id: detector-red,   type: detector, color: red,   x: 15.3, y: 47.6,  angle: 30 }
+  - { id: detector-green, type: detector, color: green, x: 44.5, y: 103.7, angle: 225 }
+  - { id: detector-blue,  type: detector, color: blue,  x: 56.2, y: 13.0,  angle: 105 }
+
+  - { id: barrier-left,  type: barrier, x1: 0,  y1: 35, x2: 40, y2: 35 }
+  - { id: barrier-right, type: barrier, x1: 25, y1: 80, x2: 75, y2: 80 }
+
+  # Movable optics, starting in the pile at the bottom left
+  - { id: prism,     type: prism, shape: right-isosceles, material: BK7, x: 12.65, y: 99.41, angle: 201.7 }
+  - { id: mirror-a,  type: mirror, x: 23.9, y: 103.0, angle: 18 }
+  - { id: mirror-b,  type: mirror, x: 19.5, y: 97.3,  angle: 255 }
+  - { id: mirror-2s, type: mirror, sides: 2, x: 31.1, y: 100.4, angle: 284 }
+
+# Optional: positions of the movable pieces that solve the board (used by "Show solution" and the
+# board check). Pieces not listed stay where they are.
+solution:
+  prism:     { x: 51.84, y: 42.70, angle: 180 }
+  mirror-a:  { x: 17.6,  y: 77.6,  angle: 0 }
+  mirror-b:  { x: 41.5,  y: 70.8,  angle: 255 }
+  mirror-2s: { x: 29.6,  y: 56.7,  angle: 90 }

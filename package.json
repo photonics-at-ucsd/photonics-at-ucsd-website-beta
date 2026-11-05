@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "diagrams": "node scripts/diagrams.mjs",
-    "media": "node scripts/media.mjs"
+    "media": "node scripts/media.mjs",
+    "laser-boards": "node scripts/laser-puzzle-check.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.1",
